@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Elgueda - Desarrollador Backend y Analista de Sistemas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Applying Inter font to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* A very dark gray, almost black */
+            color: #e2e8f0; /* A light gray for text */
+        }
+        /* Custom gradient for hero section */
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, #1a202c, #0a0a0a);
+        }
+        /* Custom gradient for card backgrounds */
+        .card-bg {
+            background-color: #111111;
+        }
+        /* Custom focus ring color */
+        .focus-ring-custom:focus {
+            --tw-ring-color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header id="header" class="bg-black/60 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold text-white">
+                Juan Elgueda<span class="text-indigo-500">.</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Sobre Mí</a>
+                <a href="#services" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Servicios</a>
+                <a href="#tech" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Tecnologías</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Proyectos</a>
+                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Contacto</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all duration-300">
+                Hablemos
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/90 backdrop-blur-lg">
+            <a href="#about" class="block text-center py-3 px-4 text-gray-200 hover:bg-gray-800">Sobre Mí</a>
+            <a href="#services" class="block text-center py-3 px-4 text-gray-200 hover:bg-gray-800">Servicios</a>
+            <a href="#tech" class="block text-center py-3 px-4 text-gray-200 hover:bg-gray-800">Tecnologías</a>
+            <a href="#portfolio" class="block text-center py-3 px-4 text-gray-200 hover:bg-gray-800">Proyectos</a>
+            <a href="#contact" class="block text-center py-3 px-4 text-gray-200 hover:bg-gray-800">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="hero" class="hero-gradient pt-32 pb-20 md:pt-48 md:pb-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+                    Más que una web, la <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">solución tecnológica</span> que tu negocio necesita.
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-10 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Soy Juan Elgueda. Traduzco tus desafíos operativos en sistemas eficientes, desarrollo backend robusto y aplicaciones web a medida que impulsan el crecimiento y la productividad de tu empresa.
+                </p>
+                <div class="flex justify-center items-center gap-4 flex-wrap animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="#contact" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-indigo-600/20">
+                        Hablemos de tu Proyecto
+                    </a>
+                    <a href="#portfolio" class="bg-gray-700/50 text-white font-medium py-3 px-8 rounded-lg border border-gray-600 hover:bg-gray-700 transition-all duration-300">
+                        Ver mis Proyectos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: "Sobre Mí" -->
+        <section id="about" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-3">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu Socio Tecnológico en La Serena</h2>
+                        <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                            <p>
+                                Mi nombre es Juan Elgueda, Técnico de Nivel Superior en Programación y Analista de Sistemas titulado con máxima distinción. Mi pasión es resolver problemas complejos a través de la tecnología. Con una sólida experiencia en desarrollo backend con Python y JavaScript, y un enfoque metódico en el análisis de sistemas, no me limito a escribir código: <span class="text-indigo-400 font-semibold">diseño soluciones</span>.
+                            </p>
+                            <p>
+                                Entiendo que cada negocio es único. Por eso, mi proceso siempre comienza escuchando. Me sumerjo en tus operaciones para entender tus verdaderas necesidades y desarrollo herramientas tecnológicas que no solo funcionan, sino que aportan un valor real y medible. Mi objetivo es simple: <span class="font-semibold text-white">optimizar tus procesos para que tú puedas enfocarte en hacer crecer tu negocio.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-800 p-2 overflow-hidden ring-4 ring-indigo-500/50">
+                            <img src="https://placehold.co/400x400/1a202c/e2e8f0?text=Juan+E." alt="Retrato de Juan Elgueda" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Servicios -->
+        <section id="services" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Soluciones a la Medida de tus Objetivos</h2>
+                    <p class="text-lg text-gray-400">
+                        Ofrezco un conjunto de servicios enfocados en construir la infraestructura digital que tu empresa realmente necesita para escalar.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-bg border border-gray-800 rounded-xl p-8 hover:border-indigo-500 hover:-translate-y-2 transition-all duration-300"><div class="bg-indigo-600/10 text-indigo-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6"><i data-lucide="server"></i></div><h3 class="text-xl font-bold text-white mb-3">Desarrollo Backend a Medida</h3><p class="text-gray-400 leading-relaxed">Creo sistemas internos, APIs y lógica de negocio con Python (Flask) y Node.js para garantizar un rendimiento seguro, rápido y escalable.</p></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8 hover:border-indigo-500 hover:-translate-y-2 transition-all duration-300"><div class="bg-indigo-600/10 text-indigo-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6"><i data-lucide="layout-template"></i></div><h3 class="text-xl font-bold text-white mb-3">Aplicaciones Web Full-Stack</h3><p class="text-gray-400 leading-relaxed">Desarrollo aplicaciones web completas y responsivas, combinando un backend potente con una interfaz de usuario moderna (HTML, CSS, JS, Astro).</p></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8 hover:border-indigo-500 hover:-translate-y-2 transition-all duration-300"><div class="bg-indigo-600/10 text-indigo-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6"><i data-lucide="database"></i></div><h3 class="text-xl font-bold text-white mb-3">Gestión de Bases de Datos</h3><p class="text-gray-400 leading-relaxed">Diseño, implemento y optimizo bases de datos relacionales (MySQL) para asegurar la integridad, seguridad y acceso rápido a la información.</p></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8 hover:border-indigo-500 hover:-translate-y-2 transition-all duration-300"><div class="bg-indigo-600/10 text-indigo-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6"><i data-lucide="file-check-2"></i></div><h3 class="text-xl font-bold text-white mb-3">Análisis de Sistemas</h3><p class="text-gray-400 leading-relaxed">Realizo un levantamiento detallado de tus necesidades para traducir requerimientos de negocio en especificaciones técnicas claras.</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Technologies -->
+        <section id="tech" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tecnologías y Herramientas</h2>
+                    <p class="text-lg text-gray-400">Utilizo un stack de tecnologías moderno y robusto, y me adapto a las herramientas que impulsan los proyectos exitosos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-bg border border-gray-800 rounded-xl p-8"><h3 class="text-xl font-bold text-white mb-4">Backend</h3><ul class="space-y-2"><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Python & Flask</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>JavaScript & Node.js</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>API REST</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Lógica de Programación</li></ul></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8"><h3 class="text-xl font-bold text-white mb-4">Frontend</h3><ul class="space-y-2"><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>HTML5</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>CSS3 & TailwindCSS</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>JavaScript</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Astro</li></ul></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8"><h3 class="text-xl font-bold text-white mb-4">Bases de Datos</h3><ul class="space-y-2"><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>MySQL</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Diseño Relacional</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Optimización de Consultas</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Integridad de Datos</li></ul></div>
+                    <div class="card-bg border border-gray-800 rounded-xl p-8"><h3 class="text-xl font-bold text-white mb-4">Metodologías y Herramientas</h3><ul class="space-y-2"><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Metodologías Ágiles</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Jira & JSM</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Git & GitHub</li><li class="flex items-center text-gray-300"><i data-lucide="check-circle" class="w-5 h-5 mr-3 text-indigo-400"></i>Análisis de Requerimientos</li></ul></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Portafolio -->
+        <section id="portfolio" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Proyectos que Crean Valor</h2>
+                    <p class="text-lg text-gray-400">La tecnología es el puente entre las ideas y la realidad. Aquí puedes ver algunos ejemplos de cómo he ayudado a construir ese puente.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card-bg rounded-xl overflow-hidden group border border-gray-800"><div class="overflow-hidden"><img src="https://placehold.co/800x600/1a202c/e2e8f0?text=Proyecto+1" alt="Imagen del Proyecto 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"></div><div class="p-8"><h3 class="text-2xl font-bold text-white mb-2">Sistema de Gestión Interno</h3><p class="text-gray-400 mb-4">Una solución backend para automatizar procesos de inventario y reportes para una empresa local.</p><div class="flex flex-wrap gap-2"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Python</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Flask</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">MySQL</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">API REST</span></div></div></div>
+                    <div class="card-bg rounded-xl overflow-hidden group border border-gray-800"><div class="overflow-hidden"><img src="https://placehold.co/800x600/1a202c/e2e8f0?text=Proyecto+2" alt="Imagen del Proyecto 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"></div><div class="p-8"><h3 class="text-2xl font-bold text-white mb-2">Plataforma Web de Reservas</h3><p class="text-gray-400 mb-4">Aplicación full-stack que permite a los usuarios reservar y gestionar citas de manera intuitiva.</p><div class="flex flex-wrap gap-2"><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Node.js</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Astro</span><span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contacto -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto"><h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Listo para optimizar tu negocio?</h2><p class="text-lg text-gray-400 mb-10">Si tienes una idea, un desafío operativo o simplemente quieres explorar cómo la tecnología puede mejorar tu empresa, me encantaría conversar contigo. Completa el formulario y me pondré en contacto a la brevedad.</p></div>
+                <form class="max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('Formulario enviado (simulación). ¡Gracias!');">
+                    <div class="space-y-6">
+                        <div><label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre</label><input type="text" id="name" name="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-custom transition-all duration-300" placeholder="Tu nombre completo" required></div>
+                        <div><label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label><input type="email" id="email" name="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-custom transition-all duration-300" placeholder="tu@email.com" required></div>
+                        <div><label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label><textarea id="message" name="message" rows="5" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus-ring-custom transition-all duration-300" placeholder="Cuéntame sobre tu proyecto..." required></textarea></div>
+                        <div class="text-center"><button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-12 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-indigo-600/20">Enviar Mensaje</button></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Juan Elgueda. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Diseñado y desarrollado con pasión en La Serena, Chile.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                mobileMenuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons
